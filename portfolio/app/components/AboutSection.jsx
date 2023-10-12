@@ -8,7 +8,7 @@ const Tab_data = [
         title: "Skills",
         id: "skills",
         content: (
-            <ul>
+            <ul className='list-disc pl-2'>
                 <li>Node.js</li>
                 <li>Express</li>
                 <li>FastAPI</li>
@@ -28,7 +28,7 @@ const Tab_data = [
         title: "Projects",
         id: "projects",
         content: (
-            <ul>
+            <ul className='list-disc pl-2'>
                 <li>CarCar</li>
                 <li>PassPro</li>
                 <li>Conference Companion</li>
@@ -39,7 +39,7 @@ const Tab_data = [
         title: "Experience",
         id: "experience",
         content: (
-            <ul>
+            <ul className='list-disc pl-2'>
                 <li>First one</li>
                 <li>Second one</li>
                 <li>Third one</li>
@@ -62,9 +62,9 @@ const AboutSection = () => {
 
     return (
         <section className='text-white'>
-            <div className='md:grid md:grind-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
+            <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
                 <Image src='/images/codingComputer.jpeg' alt='About Section' width={500} height={500} />
-                <div>
+                <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                     <h2 className='text-4xl font-bold text-white mb-4'>About Me</h2>
                     <p className='text-base md:text-lg '>
                         I&apos;m an enthusiastic Full Stack Developer based in the San Francisco Bay Area, California. 
@@ -74,7 +74,7 @@ const AboutSection = () => {
                         I&apos;m currently on the lookout for exciting opportunities in software development and am open to roles as a Full Stack Developer, Front-End Developer, or Back-End Developer. 
                         My goal is to join a forward-thinking and innovative team where I can contribute my skills, dedication, and passion to craft outstanding software solutions.
                     </p>
-                    <div className='flex flex-row mt-8'>
+                    <div className='flex flex-row justify-start mt-8'>
                         <TabButton 
                         selectTab={() => handleTabChange("skills")} 
                         active={tab === "skills"}
