@@ -6,22 +6,25 @@ const projectsData = [
         id: 1,
         title: "Pass Pro",
         image: "/images/projects/PassPro.png",
-        description: "",
-        tag: ["All", "Web"]
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        tag: ["All", "Web"],
+        gitUrl: 'https://github.com/chdclar16/pass-pro'
     },
     {
         id:2,
         title: "Conference Companion",
         image: "/images/projects/ConferenceCompanion.png",
-        description: "",
-        tag: ["All", "Web"]
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        tag: ["All", "Web"],
+        gitUrl: 'https://github.com/chdclar16/ConferenceCompanion'
     },
     {
         id:3,
         title: "Car Car",
         image: "/images/projects/CarCar.png",
-        description: "",
-        tag: ["All", "Web"]
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        tag: ["All", "Web"],
+        gitUrl: 'https://github.com/chdclar16/CarCar'
     },
 ]
 
@@ -40,6 +43,7 @@ const ProjectSection = () => {
                 description={project.description} 
                 imgUrl={project.image} 
                 tags={project}
+                gitUrl={project.gitUrl}
             />))}
         </div>
     </div>
