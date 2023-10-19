@@ -3,7 +3,7 @@ import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
 
-const Tab_data = [
+const tabData = [
     {
         title: "Skills",
         id: "skills",
@@ -98,7 +98,7 @@ const AboutSection = () => {
                         </TabButton>
                     </div>
                     <div className='mt-8'>
-                        {Tab_data.find((t) => t.id === tab).content}
+                        {tabData.find((t) => t.id === tab).content}
                     </div>
                 </div>
             </div>
