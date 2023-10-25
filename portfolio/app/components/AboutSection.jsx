@@ -3,57 +3,156 @@ import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
 import { Element } from 'react-scroll';
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+import { FaReact } from 'react-icons/fa';
+import { BiLogoTailwindCss } from 'react-icons/bi';
+import { TbBrandNextjs } from 'react-icons/tb';
+import { BsFillBootstrapFill, BsFiletypeSql } from 'react-icons/bs';
+import { 
+    SiExpress, 
+    SiFastapi, 
+    SiDjango, 
+    SiNodedotjs, 
+    SiMongodb,
+    SiPostgresql,
+    SiTypescript,
+    SiPython,
+    SiJavascript,
+    SiRedux,
+    SiDocker
+} from 'react-icons/si';
 
 const tabData = [
     {
-        title: "Skills",
-        id: "skills",
+        title: "Front-End Skills",
+        id: "FEskills",
         content: (
-            <ul className='list-disc pl-2'>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>FastAPI</li>
-                <li>React</li>
-                <li>React Redux</li>
-                <li>Next.js</li>
-                <li>Django</li>
-                <li>Python</li>
-                <li>MongoDB</li>
-                <li>PostgresSQL</li>
-                <li>TailWind</li>
-                <li>Bootstrap</li>
-            </ul>
+        <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <li className="flex items-center">
+                {<FaReact />}
+                <div className="flex-shrink-0 ml-2 text-lg">
+                    React
+                </div>
+            </li>
+            <li className="flex items-center">
+                {<SiRedux />} 
+                <div className="flex-shrink-0 ml-2 text-lg">
+                    Redux & RTK
+                </div>
+            </li>
+            <li className="flex items-center">                
+                {<TbBrandNextjs />}
+                <div className="flex-shrink-0 ml-2 text-lg">
+                    Next.js 
+                </div>
+            </li>
+            <li className="flex items-center">
+                {<BiLogoTailwindCss />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    TailWind
+                </div>
+            </li>
+            <li className="flex items-center">
+                {<BsFillBootstrapFill />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    Bootstrap
+                </div>
+            </li>
+        </ul>
         )
     },
     {
-        title: "Projects",
-        id: "projects",
+        title: "Back-End Skills",
+        id: "BEskills",
         content: (
-            <ul className='list-disc pl-2'>
-                <li>CarCar</li>
-                <li>PassPro</li>
-                <li>Conference Companion</li>
-            </ul>
+            <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <li className="flex items-center">
+                {<SiExpress />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    Express
+                </div>
+            </li>
+            <li className="flex items-center">
+                {<SiFastapi />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    FastAPI
+                </div>
+            </li>
+            <li className="flex items-center">
+                {<SiDjango />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    Django 
+                </div>
+            </li>
+            <li className="flex items-center">
+                Restful APIs
+            </li>
+            <li className="flex items-center">
+                {<SiNodedotjs />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    Node.js
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<SiMongodb />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    MongoDB
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<SiPostgresql />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    PostgresSQL 
+                </div>
+            </li>
+            
+        </ul>
         )
     },
     {
-        title: "Experience",
-        id: "experience",
+        title: "Other Technical Skills",
+        id: "OSkills",
         content: (
-            <ul className='list-disc pl-2'>
-                <li>First one</li>
-                <li>Second one</li>
-                <li>Third one</li>
-            </ul>
+            <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <li className="flex items-center">
+                {<SiTypescript />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    TypeScript
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<SiPython />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    Python
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<SiJavascript />}
+                <div className='flex-shrink-0 ml-2 text-lg'>
+                    JavaScript ES6
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<BsFiletypeSql />}
+                <div className="flex-shrink-0 ml-2 text-lg">
+                    SQL
+                </div> 
+            </li>
+            <li className="flex items-center">
+                {<SiDocker />}
+                <div className="flex-shrink-0 ml-2 text-lg">
+                    Docker
+                </div> 
+            </li>
+        </ul>
         )
-    }
+    }   
 
 ]
 
 
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("FEskills");
     const [isPending, startTransition] = useTransition();
 
     const handleTabChange = (id) => {
@@ -115,25 +214,25 @@ const AboutSection = () => {
                         </motion.p>
                         <div className='flex flex-row justify-start mt-8'>
                             <TabButton 
-                            selectTab={() => handleTabChange("skills")} 
-                            active={tab === "skills"}
+                            selectTab={() => handleTabChange("FEskills")}
+                            active={tab === "FEskills"}
                             >
                                 {" "}
-                                Skills {" "}
+                                Front-End Skills {" "}
                             </TabButton>
                             <TabButton 
-                            selectTab={() => handleTabChange("projects")} 
-                            active={tab === "projects"}
+                            selectTab={() => handleTabChange("BEskills")}
+                            active={tab === "BEskills"} 
                             >
                                 {" "}
-                                Projects {" "}
+                                Back-End Skills {" "}
                             </TabButton>
                             <TabButton 
-                            selectTab={() => handleTabChange("experience")} 
-                            active={tab === "experience"}
+                            selectTab={() => handleTabChange("OSkills")}
+                            active={tab === "OSkills"} 
                             >
                                 {" "}
-                                Experience {" "}
+                                Other Technical Skills {" "}
                             </TabButton>
                         </div>
                         <div className='mt-8'>

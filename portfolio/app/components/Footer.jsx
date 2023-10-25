@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { AiOutlineCopyrightCircle } from 'react-icons/ai'
 
 const Footer = () => {
   return (
@@ -13,7 +14,14 @@ const Footer = () => {
               sizes='25vw'
               style={{ width: '10%', height: 'auto' }} 
           />
-        <p className="text-slate-600">All rights reserved.</p>
+          
+          <p className="text-slate-600">
+            <AiOutlineCopyrightCircle 
+              style={{ display: 'inline-block', verticalAlign: 'middle' }} 
+            /> 
+            {""}
+            All rights reserved.
+        </p>
       </div>
     </footer>
   );
