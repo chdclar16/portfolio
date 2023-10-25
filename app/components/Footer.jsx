@@ -7,7 +7,7 @@ const Footer = () => {
     <footer className="footer border z-10 border-t-[#33353F] border-l-transparent border-r-transparent text-white">
       <div className='flex flex-wrap items-center justify-between mx-auto px-4 py-2'>
           <Image 
-              src="./images/Logo.png"
+              src="./images/logo.png"
               width={0}
               height={0}
               alt="Logo"
