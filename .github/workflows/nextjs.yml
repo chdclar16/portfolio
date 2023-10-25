@@ -76,6 +76,10 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      - name: Set APIs
+        env:
+            RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+            FROM_EMAIL: $ {{ secrets.FROM_EMAIL }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
