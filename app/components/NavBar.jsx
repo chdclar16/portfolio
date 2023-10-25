@@ -39,7 +39,7 @@ const NavBar = () => {
                     width={0}
                     height={0}
                     alt="Logo"
-                    sizes='25vw'
+                    sizes='10vw'
                     style={{ width: '100%', height: 'auto' }} 
                     />
             </Link>
