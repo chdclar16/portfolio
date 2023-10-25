@@ -3,7 +3,8 @@ import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { Link, Element } from 'react-scroll';
+import { Link as ScrollLink, Element } from 'react-scroll';
+import Link from 'next/link';
 
 
 
@@ -45,7 +46,7 @@ const HeroSection = () => {
                 I&apos;m currently on the lookout for exciting opportunities in software development and am open to roles as a Full Stack Developer, Front-End Developer, or Back-End Developer. 
                 My goal is to join a forward-thinking and innovative team where I can contribute my skills, dedication, and passion to craft outstanding software solutions.
                 </p>
-                <Link 
+                <ScrollLink 
                     to='contact'
                     smooth={true}
                     duration={500}
@@ -54,10 +55,15 @@ const HeroSection = () => {
                     <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-900 via-blue-500 to-neutral-300 hover:scale-75 ease-in-out duration-150 text-white'>
                         Let&apos;s Connect
                     </button>
-                </Link>
+                </ScrollLink>
+                <Link
+                    href="https://drive.google.com/file/d/1YeSCsyVTohxzJUgIfa37nqedqM7ExrAc/view"
+                    target='_blank'
+                    >
                     <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-900 via-blue-500 to-neutral-300 hover:scale-75 ease-in-out duration-150 hover:bg-slate-800 text-white mt-3'>
-                        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Download Resume</span>
+                        <span className='block bg-[#121212] hover:bg-slate-800 rounded-full px-5 py-2'>Resume</span>
                     </button>
+                </Link>
             </motion.div>
             <motion.div 
                 initial={{ opacity: 0, scale: 0.5 }} 

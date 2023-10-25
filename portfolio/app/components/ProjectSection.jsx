@@ -30,7 +30,7 @@ const projectsData = [
         id:4,
         title: "Personal Portfolio",
         image: "/images/projects/Portfolio.png",
-        description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        description:"The personal portfolio project was created using Next.js and Tailwind CSS, spiced up with additional functionalities from React libraries such as react-icons, react-scroll and many more. To enhance the presentation, framer motion was employed for creating engaging animations.",
         gitUrl: 'https://github.com/chdclar16/portfolionext'
     },
     {

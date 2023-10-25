@@ -32,6 +32,7 @@ const NavBar = () => {
                 smooth={true}
                 duration={500}
                 offset={-200}
+                className='cursor-pointer'
             >
                 <Image 
                     src="/images/Logo.png"

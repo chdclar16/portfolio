@@ -29,13 +29,13 @@ const EmailSection = () => {
     
     if (response.status === 200) {
         console.log('Message sent.');
-        setEmailSubmitted(true)
+        setEmailSubmitted(true);
     }
     }
 
     
 
-  return (
+return (
     <Element name='contact'>
         <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative'>
         <div className='bg-gradient-to-b from-blue-900 to-transparent rounded-lg h-80 w-80 absolute top-1/2 -left-4 blur-md transform -translate-y-3/4 -translate-x-1/2'></div>
