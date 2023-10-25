@@ -51,7 +51,7 @@ return (
                     <div className='socials flex flex-row gap-2'>
                         <Link href="https://github.com/chdclar16">
                             <Image 
-                                src="/github-icon.svg" 
+                                src="./github-icon.svg" 
                                 alt='github icon' 
                                 width={32} 
                                 height={32} 
@@ -59,7 +59,7 @@ return (
                         </Link>
                         <Link href="https://www.linkedin.com/in/chadmanuel/">
                             <Image 
-                                src="/linkedin-icon.svg" 
+                                src="./linkedin-icon.svg" 
                                 alt='linkedin icon' 
                                 width={32} 
                                 height={32} 
