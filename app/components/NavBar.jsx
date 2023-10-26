@@ -31,7 +31,7 @@ const NavBar = () => {
                 to='hero'
                 smooth={true}
                 duration={500}
-                offset={-200}
+                offset={-250}
                 className='cursor-pointer'
             >
                 <Image 
@@ -39,7 +39,7 @@ const NavBar = () => {
                     width={0}
                     height={0}
                     alt="Logo"
-                    sizes='10vw'
+                    sizes='20vw'
                     style={{ width: '100%', height: 'auto' }} 
                 />
             </Link>
@@ -66,7 +66,7 @@ const NavBar = () => {
                 <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8'>
                     {
                         navLinks.map((link, index) => (
-                            <li key={index}>
+                            <li key={index} style={index === navLinks.length - 1 ? { marginRight: '20px' } : {}}>
                                 <NavLink href={link.path} title={link.title} />
                             </li>
                         ))
