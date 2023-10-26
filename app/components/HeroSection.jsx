@@ -38,10 +38,9 @@ const HeroSection = () => {
                                 'A Software Engineer',
                                 1000
                             ]}
-                            wrapper='span'
+                            wrapper='div'
                             speed={50}
                             repeat={Infinity}
-                            className='max-w-300 h-2em'
                         />
                     </div>
                 </h1>
