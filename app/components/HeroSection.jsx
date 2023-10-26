@@ -23,25 +23,27 @@ const HeroSection = () => {
                     <span className='text-transparent bg-clip-text bg-gradient-to-r from-sky-900 to-neutral-500'>
                         Hello, I&apos;m{" "}
                     </span>
-                    <br></br>
-                    <TypeAnimation
-                        sequence={[
-                            'Chad',
-                            3000,
-                            'A Front End Developer',
-                            1000,
-                            'A Back End Developer',
-                            1000,
-                            'A Full Stack Engineer',
-                            1000,
-                            'A Software Engineer',
-                            1000
-                        ]}
-                        wrapper='span'
-                        speed={50}
-                        repeat={Infinity}
-                        className='max-w-[300px] h-[2em]'
-                    />
+                    <br />
+                    <div className='max-w-[300px] h-[2em]'>
+                        <TypeAnimation
+                            sequence={[
+                                'Chad',
+                                3000,
+                                'A Front End Developer',
+                                1000,
+                                'A Back End Developer',
+                                1000,
+                                'A Full Stack Engineer',
+                                1000,
+                                'A Software Engineer',
+                                1000
+                            ]}
+                            wrapper='span'
+                            speed={50}
+                            repeat={Infinity}
+                            className='max-w-[300px] h-[2em]'
+                        />
+                    </div>
                 </h1>
                 <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
                 I&apos;m currently on the lookout for exciting opportunities in software development and am open to roles as a Full Stack Developer, Front-End Developer, or Back-End Developer. 
