@@ -207,10 +207,8 @@ const AboutSection = () => {
                             className='text-base md:text-lg'
                             variants={childVariants}
                         >
-                            I&apos;m an enthusiastic Full Stack Developer based in the San Francisco Bay Area, California. 
-                            My journey into software engineering began after a background in tech operations, where I gained valuable insights into the industry. 
-                            However, it was during my time in the autonomous vehicle industry that my passion for technology was reignited.
-                            This experience inspired me to make the leap into the dynamic world of software development. 
+                            I&apos;m a Full Stack Developer from San Francisco Bay Area, California. I&apos;ve transitioned from tech operations and jumped headfirst into the exhilarating world of software development. 
+                            I&apos;m all about crafting digital solutions and making things happen in the tech universe. Let&apos;s code some awesome stuff! 🚀
                         </motion.p>
                         <div className='flex flex-row justify-start mt-8'>
                             <TabButton 
