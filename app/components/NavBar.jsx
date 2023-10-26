@@ -41,7 +41,7 @@ const NavBar = () => {
                     alt="Logo"
                     sizes='10vw'
                     style={{ width: '100%', height: 'auto' }} 
-                    />
+                />
             </Link>
             <div className='mobile-menu block md:hidden'>
             {
