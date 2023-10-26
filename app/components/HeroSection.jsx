@@ -40,6 +40,7 @@ const HeroSection = () => {
                         wrapper='span'
                         speed={50}
                         repeat={Infinity}
+                        className='max-w-[300px] h-[2em]'
                     />
                 </h1>
                 <p className='text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl'>
