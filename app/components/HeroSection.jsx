@@ -24,7 +24,7 @@ const HeroSection = () => {
                         Hello, I&apos;m{" "}
                     </span>
                     <br />
-                    <div className='max-w-[300px] h-[2em]'>
+                    <div className='max-w-300 h-2em'>
                         <TypeAnimation
                             sequence={[
                                 'Chad',
@@ -41,7 +41,7 @@ const HeroSection = () => {
                             wrapper='span'
                             speed={50}
                             repeat={Infinity}
-                            className='max-w-[300px] h-[2em]'
+                            className='max-w-300 h-2em'
                         />
                     </div>
                 </h1>
