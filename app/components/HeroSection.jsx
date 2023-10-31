@@ -41,7 +41,7 @@ const HeroSection = () => {
                             wrapper='div'
                             speed={50}
                             repeat={Infinity}
-                            className='lg:text-xl xl:text-6xl'
+                            className='text-sm md:text-xl xl:text-6xl'
                         />
                     </div>
                 </h1>
