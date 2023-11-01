@@ -23,6 +23,10 @@ const navLinks = [
 
 const NavBar = () => {
     const [navBarOpen, setNavBarOpen] = useState(false)
+
+    const handleNavBarClick = ()=> {
+        setNavBarOpen(!navBarOpen)
+    }
     
     return (
     <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-75'>
@@ -48,14 +52,14 @@ const NavBar = () => {
             {
                 !navBarOpen? (
                     <button 
-                        onClick={() => setNavBarOpen(!navBarOpen)} 
+                        onClick={handleNavBarClick} 
                         className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
                     >
                         <Bars3Icon className='h-5 w-5' />
                     </button>
                 ) : (
                     <button 
-                        onClick={() => setNavBarOpen(!navBarOpen)} 
+                        onClick={handleNavBarClick} 
                         className='flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white'
                         >
                         <XMarkIcon className='h-5 w-5' />
