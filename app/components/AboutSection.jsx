@@ -28,31 +28,31 @@ const tabData = [
         id: "FEskills",
         content: (
         <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<FaReact />}
                 <div className="flex-shrink-0 ml-2 text-lg">
                     React
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiRedux />} 
                 <div className="flex-shrink-0 ml-2 text-lg">
                     Redux & RTK
                 </div>
             </li>
-            <li className="flex items-center">                
+            <li className="flex items-center m-auto">                
                 {<TbBrandNextjs />}
                 <div className="flex-shrink-0 ml-2 text-lg">
                     Next.js 
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<BiLogoTailwindCss />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     TailWind
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<BsFillBootstrapFill />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     Bootstrap
@@ -72,34 +72,34 @@ const tabData = [
                     Express
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiFastapi />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     FastAPI
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiDjango />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     Django 
                 </div>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 Restful APIs
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiNodedotjs />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     Node.js
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiMongodb />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     MongoDB
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiPostgresql />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     PostgresSQL 
@@ -114,31 +114,31 @@ const tabData = [
         id: "OSkills",
         content: (
             <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiTypescript />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     TypeScript
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiPython />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     Python
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiJavascript />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     JavaScript ES6
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<BsFiletypeSql />}
                 <div className="flex-shrink-0 ml-2 text-lg">
                     SQL
                 </div> 
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiDocker />}
                 <div className="flex-shrink-0 ml-2 text-lg">
                     Docker

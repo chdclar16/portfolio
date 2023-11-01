@@ -89,7 +89,7 @@ return (
                     </div>
                     <div className='mb-6'>
                         <label 
-                            htmlFor='Subject' 
+                            htmlFor='subject' 
                             className='text-white block mb-2 text-sm font-medium'
                         >
                             Subject
@@ -105,7 +105,7 @@ return (
                     </div>
                     <div className='mb-6'>
                         <label 
-                            htmlFor='Message' 
+                            htmlFor='message' 
                             className='text-white block mb-2 text-sm font-medium'
                         >
                             Message
