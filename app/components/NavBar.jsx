@@ -26,7 +26,7 @@ const NavBar = () => {
     
     return (
     <nav className='fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-75'>
-        <div className='flex flex-wrap items-center justify-between mx-auto pt-4 py-2 pb-0 bg-opacity-75'>
+        <div className='flex flex-wrap items-center justify-between mx-auto pt-4 py-2 pb-0'>
             <Link 
                 to='hero'
                 smooth={true}
@@ -37,10 +37,11 @@ const NavBar = () => {
                 <Image 
                     src="./images/logo.png"
                     width={0}
-                    height={0}
+                    height={0}z
                     alt="Logo"
                     sizes='20vw'
                     style={{ width: '100%', height: 'auto' }} 
+                    className='bg-opacity-75'
                 />
             </Link>
             <div className='mobile-menu block md:hidden'>
@@ -62,7 +63,7 @@ const NavBar = () => {
                 )
             }
             </div>
-            <div className='menu hidden md:block md:w-auto' id="navbar">
+            <div className='menu hidden md:block md:w-auto bg-opacity-75' id="navbar">
                 <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8'>
                     {
                         navLinks.map((link, index) => (

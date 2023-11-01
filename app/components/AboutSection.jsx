@@ -66,7 +66,7 @@ const tabData = [
         id: "BEskills",
         content: (
             <ul className="list-disc pl-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            <li className="flex items-center">
+            <li className="flex items-center m-auto">
                 {<SiExpress />}
                 <div className='flex-shrink-0 ml-2 text-lg'>
                     Express
@@ -234,7 +234,9 @@ const AboutSection = () => {
                             </TabButton>
                         </div>
                         <div className='mt-8'>
-                            {tabData.find((t) => t.id === tab).content}
+                            <div className='flex flex-col gap-20'>
+                                {tabData.find((t) => t.id === tab).content}
+                            </div>
                         </div>
                     </motion.div>
                 </motion.div>
