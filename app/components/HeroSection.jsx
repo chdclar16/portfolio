@@ -33,7 +33,7 @@ const HeroSection = () => {
                                 1000,
                                 'A Back End Developer',
                                 1000,
-                                'A Full Stack Engineer',
+                                'A Full Stack Developer',
                                 1000,
                                 'A Software Engineer',
                                 1000
@@ -60,7 +60,7 @@ const HeroSection = () => {
                     </button>
                 </ScrollLink>
                 <Link
-                    href="https://drive.google.com/file/d/1YeSCsyVTohxzJUgIfa37nqedqM7ExrAc/view"
+                    href='https://drive.google.com/file/d/1htZlZl3Pe9-41mjQYVqclXjVWl4Mp8zZ/view?usp=drive_link'
                     target='_blank'
                     >
                     <button className='px-1 py-1 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-900 via-blue-500 to-neutral-300 hover:scale-75 ease-in-out duration-150 hover:bg-slate-800 text-white mt-3'>
