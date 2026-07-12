@@ -48,6 +48,7 @@ adopted incrementally (`allowJs: true`, `checkJs: false`). Do not convert existi
 `.js` files unless asked.
 
 ## Workflow — important                              [NEW]
+- Do NOT add `Co-Authored-By: Claude` trailers to any commit message.
 - Never commit directly to `main`. Branch off `redesign`.
 - One ticket = one branch = one PR. Finish it, open the PR, summarize, then STOP
   and wait for my approval. Do not start the next ticket unsolicited.
