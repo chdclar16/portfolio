@@ -23,8 +23,6 @@ const portfolioData: PortfolioData = {
         "Ecommerce platform for buying tickets and empowering event hosts to create and sell tickets for their own events.",
       stack: ["React", "Redux"],
       githubUrl: "https://github.com/chdclar16/pass-pro",
-      // TODO: add liveUrl once deployed
-      // TODO: add image path once screenshot is in /public
     },
     {
       id: 2,
@@ -33,8 +31,6 @@ const portfolioData: PortfolioData = {
         "All-in-one tool for managing conferences and events — create, schedule, and track workshops and meetings. Uses the Pexels API for imagery.",
       stack: ["Next.js"],
       githubUrl: "https://github.com/chdclar16/ConferenceCompanion",
-      // TODO: add liveUrl once deployed
-      // TODO: add image path once screenshot is in /public
     },
     {
       id: 3,
@@ -43,8 +39,6 @@ const portfolioData: PortfolioData = {
         "Dealership management system for tracking car inventory, sales, and maintenance schedules in one place.",
       stack: ["React", "Django", "PostgreSQL"],
       githubUrl: "https://github.com/chdclar16/CarCar",
-      // TODO: add liveUrl once deployed
-      // TODO: add image path once screenshot is in /public
     },
     {
       id: 4,
@@ -53,8 +47,6 @@ const portfolioData: PortfolioData = {
         "Discord bot that provides character information and build recommendations for the game Omega Strikers.",
       stack: ["Node.js"],
       githubUrl: "https://github.com/chdclar16/omega-striker-build-bot",
-      // TODO: add liveUrl once deployed
-      // TODO: add image path once screenshot is in /public
     },
   ],
 
