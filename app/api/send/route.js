@@ -1,16 +1,16 @@
 // import { EmailTemplate } from '../../../components/EmailTemplate';
-import { NextResponse } from 'next/server';
-import { Resend } from 'resend';
+import { NextResponse } from "next/server";
+import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 const fromEmail = process.env.FROM_EMAIL;
 
 export async function POST(req, res) {
-  const { email, subject, message } =  await req.json();
+  const { email, subject, message } = await req.json();
   try {
     const data = await resend.emails.send({
       from: fromEmail,
-      to: ['chadc_manuel@yahoo.com'],
+      to: ["chadc_manuel@yahoo.com"],
       subject: subject,
       reply_to: email,
       react: (
@@ -28,3 +28,4 @@ export async function POST(req, res) {
     return NextResponse.json({ error });
   }
 }
+

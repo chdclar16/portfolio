@@ -23,6 +23,8 @@ import {
   SiMui,
 } from "react-icons/si";
 
+//TODO: Need to test out changes and make sure nothing broke
+
 const SkillData = (props) => {
   const { icon, skillName } = props;
   return (
