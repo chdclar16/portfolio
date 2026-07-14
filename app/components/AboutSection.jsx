@@ -2,7 +2,6 @@
 import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
 import TabButton from './TabButton';
-import { Element } from 'react-scroll';
 import { motion } from 'framer-motion';
 import { FaReact } from 'react-icons/fa';
 import { BiLogoTailwindCss } from 'react-icons/bi';
@@ -178,8 +177,7 @@ const AboutSection = () => {
     };
 
     return (
-        <Element name="about">
-            <section className='text-white'>
+        <section id="about" className='text-white'>
                 <motion.div 
                     variants={containerVariants}
                     initial="hidden"
@@ -240,8 +238,7 @@ const AboutSection = () => {
                         </div>
                     </motion.div>
                 </motion.div>
-            </section>
-        </Element>
+        </section>
     )
 }
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
-import { Link as ScrollLink, Element } from 'react-scroll';
+import { scrollToSection } from '../utils/scrollTo';
 import Link from 'next/link';
 
 
@@ -11,7 +11,7 @@ import Link from 'next/link';
 const HeroSection = () => {
 
   return (
-    <Element name='hero'>
+    <div id="hero">
         <div className='grid grid-cols-1 sm:grid-cols-12'>
             <motion.div 
                 initial={{ opacity: 0, scale: 0.5 }} 
@@ -49,16 +49,12 @@ const HeroSection = () => {
                 I&apos;m currently on the lookout for exciting opportunities in software development and am open to roles as a Full Stack Developer, Front-End Developer, or Back-End Developer. 
                 My goal is to join a forward-thinking and innovative team where I can contribute my skills, dedication, and passion to craft outstanding software solutions.
                 </p>
-                <ScrollLink 
-                    to='contact'
-                    smooth={true}
-                    duration={500}
-                    offset={-100}
+                <button
+                    onClick={() => scrollToSection('contact', -100)}
+                    className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-900 via-blue-500 to-neutral-300 hover:scale-75 ease-in-out duration-150 text-white'
                 >
-                    <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-900 via-blue-500 to-neutral-300 hover:scale-75 ease-in-out duration-150 text-white'>
-                        Let&apos;s Connect
-                    </button>
-                </ScrollLink>
+                    Let&apos;s Connect
+                </button>
                 <Link
                     href='https://drive.google.com/file/d/1htZlZl3Pe9-41mjQYVqclXjVWl4Mp8zZ/view?usp=drive_link'
                     target='_blank'
@@ -85,7 +81,7 @@ const HeroSection = () => {
                 </div>
             </motion.div>
         </div>
-    </Element>
+    </div>
   )
 }
 

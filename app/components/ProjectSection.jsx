@@ -2,7 +2,6 @@
 import React, { useRef } from 'react';
 import ProjectCard from './ProjectCard';
 import { motion, useInView } from "framer-motion";
-import { Element } from 'react-scroll';
 
 const projectsData = [
     {
@@ -52,7 +51,7 @@ const ProjectSection = () => {
     const isInView = useInView(ref, { once: true })
 
   return (
-    <Element name="projects">
+    <div id="projects">
         <h2 className='text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12'>
             My Projects
         </h2>
@@ -76,7 +75,7 @@ const ProjectSection = () => {
                 </motion.li>
             ))}
         </ul>
-    </Element>
+    </div>
   )
 }
 
