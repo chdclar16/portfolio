@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import type { View } from "@/types/portfolio";
 import portfolioData from "@/data/portfolioData";
 
@@ -7,18 +8,16 @@ interface LogoProps {
 
 export function Logo({ view }: LogoProps) {
   const { name } = portfolioData.profile;
-
-  if (view === "neovim") {
-    return (
-      <span className="font-jetbrains text-sm" style={{ color: "var(--tn-blue)" }}>
-        {name.toLowerCase().replace(" ", "-")}.nvim
-      </span>
-    );
-  }
+  const isNeovim = view === "neovim";
 
   return (
-    <span className="font-inter text-base font-semibold tracking-tight text-gray-900">
-      {name}
+    <span
+      className={clsx({
+        "font-jetbrains text-sm text-[var(--tn-blue)]": isNeovim,
+        "font-inter text-base font-semibold tracking-tight text-gray-900": !isNeovim,
+      })}
+    >
+      {isNeovim ? `${name.toLowerCase().replace(" ", "-")}.nvim` : name}
     </span>
   );
 }
