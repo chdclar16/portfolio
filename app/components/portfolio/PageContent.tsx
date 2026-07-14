@@ -3,6 +3,8 @@
 import clsx from "clsx";
 import { useView } from "@/app/components/portfolio/ViewContext";
 import HeroSection from "@/app/components/portfolio/HeroSection";
+import AboutSection from "@/app/components/portfolio/AboutSection";
+import SkillsSection from "@/app/components/portfolio/SkillsSection";
 
 export default function PageContent() {
   const { view } = useView();
@@ -14,6 +16,8 @@ export default function PageContent() {
       )}
     >
       <HeroSection />
+      <AboutSection />
+      <SkillsSection />
     </main>
   );
 }
