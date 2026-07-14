@@ -6,6 +6,7 @@ import HeroSection from "@/app/components/portfolio/HeroSection";
 import AboutSection from "@/app/components/portfolio/AboutSection";
 import SkillsSection from "@/app/components/portfolio/SkillsSection";
 import ProjectsSection from "@/app/components/portfolio/ProjectsSection";
+import ContactSection from "@/app/components/portfolio/ContactSection";
 
 export default function PageContent() {
   const { view } = useView();
@@ -20,6 +21,7 @@ export default function PageContent() {
       <AboutSection />
       <SkillsSection />
       <ProjectsSection />
+      <ContactSection />
     </main>
   );
 }
