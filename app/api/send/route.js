@@ -12,7 +12,7 @@ export async function POST(req, res) {
       from: fromEmail,
       to: ['chadc_manuel@yahoo.com'],
       subject: subject,
-      reply_to: email,
+      replyTo: email,
       react: (
         <>
           <h1>{subject}</h1>
