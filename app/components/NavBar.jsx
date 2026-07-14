@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { Link } from "react-scroll";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
@@ -31,11 +30,8 @@ const NavBar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-75">
       <div className="flex items-center justify-between mx-auto pt-4 py-2 pb-0">
-        <Link
-          to="hero"
-          smooth={true}
-          duration={500}
-          offset={-250}
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           className="cursor-pointer"
         >
           <Image
@@ -47,7 +43,7 @@ const NavBar = () => {
             sizes="20vw"
             className="bg-opacity-75 w-1/2 sm:w-full "
           />
-        </Link>
+        </button>
         <div className="mobile-menu block md:hidden">
           {!navBarOpen ? (
             <button
