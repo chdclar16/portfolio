@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useView } from "@/app/components/portfolio/ViewContext";
 import NvimBuffer, { NvimLine } from "@/app/components/portfolio/NvimBuffer";
+import FadeIn from "@/app/components/portfolio/FadeIn";
 import portfolioData from "@/data/portfolioData";
 import type { ReactNode } from "react";
 
@@ -55,46 +56,83 @@ function NvimProjects() {
   );
 }
 
-function EditorialProjects() {
+function ProjectCard({
+  project,
+  featured = false,
+  delay = 0,
+}: {
+  project: (typeof projects)[number];
+  featured?: boolean;
+  delay?: number;
+}) {
   return (
-    <section id="projects" className="px-6 md:px-16 lg:px-24 py-24 border-t border-gray-100">
-      <div className="max-w-4xl">
-        <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-accent)] mb-4">
-          Work
-        </p>
-        <h2 className="font-inter text-4xl font-bold text-gray-900 mb-12">
-          Projects
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <div
-              key={project.id}
-              className="border border-gray-200 rounded-xl p-6 hover:border-gray-300 transition-colors"
-            >
-              <h3 className="font-inter text-lg font-semibold text-gray-900 mb-2">
-                {project.title}
-              </h3>
-              <p className="font-inter text-sm text-gray-500 leading-relaxed mb-4">
-                {project.description}
-              </p>
-              <div className="flex flex-wrap gap-2 mb-5">
-                {project.stack.map((tech) => (
-                  <span
-                    key={tech}
-                    className="font-inter text-xs px-2.5 py-1 rounded-full bg-gray-100 text-gray-600"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-              <Link
-                href={project.githubUrl}
-                target="_blank"
-                className="font-inter text-sm text-[var(--ed-accent)] hover:underline"
+    <FadeIn delay={delay} className="h-full">
+      <div
+        className="group h-full flex flex-col p-8 border border-[var(--ed-border)] rounded-[12px] transition-shadow duration-200"
+        style={{ background: "var(--ed-surface)" }}
+        onMouseEnter={e => (e.currentTarget.style.boxShadow = "0 2px 8px rgba(0,0,0,0.04)")}
+        onMouseLeave={e => (e.currentTarget.style.boxShadow = "none")}
+      >
+        <div className="flex-1">
+          <h3
+            className={`font-inter font-semibold text-[var(--ed-heading)] mb-3 ${featured ? "text-xl" : "text-lg"}`}
+          >
+            {project.title}
+          </h3>
+          <p className="font-inter text-sm text-[var(--ed-muted)] leading-relaxed mb-5" style={{ lineHeight: "1.6" }}>
+            {project.description}
+          </p>
+          <div className="flex flex-wrap gap-1.5 mb-6">
+            {project.stack.map((tech) => (
+              <span
+                key={tech}
+                className="font-inter text-xs px-2.5 py-1 rounded-full bg-[#F7F6F3] text-[var(--ed-muted)]"
+                style={{ letterSpacing: "0.02em" }}
               >
-                View on GitHub ↗
-              </Link>
+                {tech}
+              </span>
+            ))}
+          </div>
+        </div>
+        <Link
+          href={project.githubUrl}
+          target="_blank"
+          className="font-inter text-sm text-[var(--ed-heading)] font-medium hover:opacity-60 transition-opacity"
+        >
+          View on GitHub ↗
+        </Link>
+      </div>
+    </FadeIn>
+  );
+}
+
+function EditorialProjects() {
+  const [first, second, ...rest] = projects;
+  return (
+    <section id="projects" className="px-6 md:px-16 lg:px-24 py-24 border-t border-[var(--ed-border)]">
+      <div className="max-w-4xl">
+        <FadeIn>
+          <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
+            Work
+          </p>
+          <h2
+            className="font-serif text-4xl text-[var(--ed-heading)] mb-12"
+            style={{ letterSpacing: "-0.02em", lineHeight: "1.1" }}
+          >
+            Projects
+          </h2>
+        </FadeIn>
+
+        {/* Bento: first card spans 2 cols, remaining fill */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {first && (
+            <div className="md:col-span-2">
+              <ProjectCard project={first} featured delay={80} />
             </div>
+          )}
+          {second && <ProjectCard project={second} delay={160} />}
+          {rest.map((project, index) => (
+            <ProjectCard key={project.id} project={project} delay={160 + (index + 1) * 80} />
           ))}
         </div>
       </div>

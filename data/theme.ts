@@ -18,5 +18,12 @@ export const tokyonight = {
 } as const;
 
 export const editorial = {
-  accent: "#1d9e75",
+  accent:     "#111111",
+  accentHover:"#333333",
+  canvas:     "#FBFBFA",
+  surface:    "#F9F9F8",
+  border:     "#EAEAEA",
+  heading:    "#111111",
+  body:       "#2F3437",
+  muted:      "#787774",
 } as const;
