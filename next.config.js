@@ -7,6 +7,9 @@ const nextConfig = {
   turbopack: {
     root: __dirname,
   },
+  experimental: {
+    useTypeScriptCli: true,
+  },
 };
 
 module.exports = nextConfig;

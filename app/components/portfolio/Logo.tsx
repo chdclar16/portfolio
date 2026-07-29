@@ -14,7 +14,7 @@ export function Logo({ view }: LogoProps) {
     <span
       className={clsx({
         "font-jetbrains text-sm text-[var(--tn-blue)]": isNeovim,
-        "font-inter text-base font-semibold tracking-tight text-gray-900": !isNeovim,
+        "font-inter text-base font-semibold tracking-tight text-[var(--ed-heading)]": !isNeovim,
       })}
     >
       {isNeovim ? `${name.toLowerCase().replace(" ", "-")}.nvim` : name}

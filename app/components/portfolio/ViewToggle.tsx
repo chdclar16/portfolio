@@ -17,7 +17,7 @@ export function ViewToggle() {
   return (
     <div
       className={clsx("flex items-center gap-0.5 p-0.5", {
-        "rounded-full border border-gray-200 bg-gray-50": !isNeovim,
+        "rounded-[4px] border border-[#EAEAEA] bg-[#F7F6F3]": !isNeovim,
         "rounded font-jetbrains text-xs bg-[var(--tn-bg-highlight)]": isNeovim,
       })}
     >
@@ -28,10 +28,10 @@ export function ViewToggle() {
             key={v}
             onClick={() => setView(v)}
             className={clsx("transition-colors", {
-              "rounded-full px-3 py-1 text-xs font-medium font-inter": !isNeovim,
+              "rounded-[4px] px-3 py-1 text-xs font-medium font-inter": !isNeovim,
               "px-3 py-1.5 rounded": isNeovim,
               "bg-[var(--ed-accent)] text-white": !isNeovim && isActive,
-              "text-gray-500": !isNeovim && !isActive,
+              "text-[var(--ed-muted)]": !isNeovim && !isActive,
               "text-[var(--tn-blue)] bg-[var(--tn-bg-sel)]": isNeovim && isActive,
               "text-[var(--tn-comment)]": isNeovim && !isActive,
             })}

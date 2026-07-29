@@ -1,8 +1,8 @@
 "use client";
 
-import clsx from "clsx";
 import { useView } from "@/app/components/portfolio/ViewContext";
 import NvimBuffer, { NvimLine } from "@/app/components/portfolio/NvimBuffer";
+import FadeIn from "@/app/components/portfolio/FadeIn";
 import portfolioData from "@/data/portfolioData";
 
 const { profile } = portfolioData;
@@ -51,41 +51,50 @@ function NvimAbout() {
 
 function EditorialAbout() {
   return (
-    <section id="about" className="px-6 md:px-16 lg:px-24 py-24">
+    <section id="about" className="px-6 md:px-16 lg:px-24 py-24 border-t border-[var(--ed-border)]">
       <div className="max-w-3xl">
-        <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-accent)] mb-4">
-          About
-        </p>
-        <h2 className="font-inter text-4xl font-bold text-gray-900 mb-8">
-          About Me
-        </h2>
-        <div className="space-y-4 font-inter text-lg text-gray-500 leading-relaxed max-w-2xl">
-          <p>
-            I&apos;m a Full Stack Developer from the San Francisco Bay Area, California.
-            I transitioned from tech operations into software development and haven&apos;t
-            looked back since.
+        <FadeIn>
+          <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
+            About
           </p>
-          <p>
-            I&apos;m passionate about crafting digital solutions and making things happen.
-            Open to full stack, front-end, and back-end roles on forward-thinking teams.
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-4 mt-10">
-          <a
-            href={profile.socials.github}
-            target="_blank"
-            className="font-inter text-sm text-gray-500 hover:text-gray-900 transition-colors underline underline-offset-4"
+          <h2
+            className="font-serif text-4xl text-[var(--ed-heading)] mb-8"
+            style={{ letterSpacing: "-0.02em", lineHeight: "1.1" }}
           >
-            GitHub ↗
-          </a>
-          <a
-            href={profile.socials.linkedin}
-            target="_blank"
-            className="font-inter text-sm text-gray-500 hover:text-gray-900 transition-colors underline underline-offset-4"
-          >
-            LinkedIn ↗
-          </a>
-        </div>
+            About Me
+          </h2>
+        </FadeIn>
+        <FadeIn delay={100}>
+          <div className="space-y-4 font-inter text-lg text-[var(--ed-muted)] max-w-2xl" style={{ lineHeight: "1.6" }}>
+            <p>
+              I&apos;m a Full Stack Developer from the San Francisco Bay Area, California.
+              I transitioned from tech operations into software development and haven&apos;t
+              looked back since.
+            </p>
+            <p>
+              Passionate about crafting focused, well-built digital products.
+              Open to full stack, front-end, and back-end roles on forward-thinking teams.
+            </p>
+          </div>
+        </FadeIn>
+        <FadeIn delay={180}>
+          <div className="flex flex-wrap gap-6 mt-10">
+            <a
+              href={profile.socials.github}
+              target="_blank"
+              className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors underline underline-offset-4"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors underline underline-offset-4"
+            >
+              LinkedIn ↗
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
