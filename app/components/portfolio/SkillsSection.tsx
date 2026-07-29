@@ -2,6 +2,7 @@
 
 import { useView } from "@/app/components/portfolio/ViewContext";
 import NvimBuffer, { NvimLine } from "@/app/components/portfolio/NvimBuffer";
+import FadeIn from "@/app/components/portfolio/FadeIn";
 import portfolioData from "@/data/portfolioData";
 
 const { skills } = portfolioData;
@@ -62,32 +63,37 @@ function NvimSkills() {
 function EditorialSkills() {
   const categories = [skills.frontend, skills.backend, skills.other];
   return (
-    <section id="skills" className="px-6 md:px-16 lg:px-24 py-16 border-t border-gray-100">
+    <section id="skills" className="px-6 md:px-16 lg:px-24 py-16 border-t border-[var(--ed-border)]">
       <div className="max-w-3xl">
-        <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-accent)] mb-4">
-          Skills
-        </p>
-        <h2 className="font-inter text-4xl font-bold text-gray-900 mb-10">
-          Tech Stack
-        </h2>
+        <FadeIn>
+          <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
+            Skills
+          </p>
+          <h2
+            className="font-serif text-4xl text-[var(--ed-heading)] mb-10"
+            style={{ letterSpacing: "-0.02em", lineHeight: "1.1" }}
+          >
+            Tech Stack
+          </h2>
+        </FadeIn>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-          {categories.map((category) => (
-            <div key={category.label}>
-              <h3 className="font-inter text-xs tracking-widest uppercase text-gray-400 mb-4">
+          {categories.map((category, index) => (
+            <FadeIn key={category.label} delay={80 + index * 80}>
+              <h3 className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
                 {category.label}
               </h3>
-              <ul className="space-y-2">
+              <ul className="space-y-2.5">
                 {category.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="font-inter text-sm text-gray-600 flex items-center gap-2"
+                    className="font-inter text-sm text-[var(--ed-body)] flex items-center gap-2.5"
                   >
-                    <span className="w-1 h-1 rounded-full bg-[var(--ed-accent)] shrink-0" />
+                    <span className="w-1 h-1 rounded-full bg-[var(--ed-muted)] shrink-0 opacity-50" />
                     {skill}
                   </li>
                 ))}
               </ul>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

@@ -2,6 +2,7 @@
 
 import { useView } from "@/app/components/portfolio/ViewContext";
 import NvimBuffer, { NvimLine } from "@/app/components/portfolio/NvimBuffer";
+import FadeIn from "@/app/components/portfolio/FadeIn";
 import portfolioData from "@/data/portfolioData";
 
 const { profile } = portfolioData;
@@ -47,47 +48,58 @@ function NvimContact() {
 
 function EditorialContact() {
   return (
-    <section id="contact" className="px-6 md:px-16 lg:px-24 py-24 border-t border-gray-100">
+    <section id="contact" className="px-6 md:px-16 lg:px-24 py-24 border-t border-[var(--ed-border)]">
       <div className="max-w-2xl">
-        <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-accent)] mb-4">
-          Contact
-        </p>
-        <h2 className="font-inter text-4xl font-bold text-gray-900 mb-6">
-          Get in touch
-        </h2>
-        <p className="font-inter text-lg text-gray-500 leading-relaxed mb-10">
-          Open to new opportunities. If you&apos;d like to work together or just want
-          to say hello, feel free to reach out.
-        </p>
-        <div className="flex flex-col gap-4">
+        <FadeIn>
+          <p className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
+            Contact
+          </p>
+          <h2
+            className="font-serif text-4xl text-[var(--ed-heading)] mb-6"
+            style={{ letterSpacing: "-0.02em", lineHeight: "1.1" }}
+          >
+            Get in touch
+          </h2>
+          <p className="font-inter text-lg text-[var(--ed-muted)] mb-10" style={{ lineHeight: "1.6" }}>
+            Open to new opportunities. If you&apos;d like to work together or just
+            want to say hello, reach out directly.
+          </p>
+        </FadeIn>
+        <FadeIn delay={100}>
           <a
             href={`mailto:${profile.email}`}
-            className="font-inter text-sm font-medium text-gray-900 hover:text-[var(--ed-accent)] transition-colors"
+            className="font-inter inline-block px-6 py-3 rounded-[4px] bg-[var(--ed-accent)] text-white text-sm font-medium mb-8 transition-colors"
+            onMouseEnter={e => (e.currentTarget.style.backgroundColor = "var(--ed-accent-hover)")}
+            onMouseLeave={e => (e.currentTarget.style.backgroundColor = "var(--ed-accent)")}
           >
-            {profile.email} ↗
+            {profile.email}
           </a>
-          <a
-            href={profile.socials.github}
-            target="_blank"
-            className="font-inter text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            GitHub ↗
-          </a>
-          <a
-            href={profile.socials.linkedin}
-            target="_blank"
-            className="font-inter text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            LinkedIn ↗
-          </a>
-          <a
-            href={profile.resumeUrl}
-            target="_blank"
-            className="font-inter text-sm text-gray-500 hover:text-gray-900 transition-colors"
-          >
-            Resume ↗
-          </a>
-        </div>
+        </FadeIn>
+        <FadeIn delay={180}>
+          <div className="flex flex-wrap gap-6 border-t border-[var(--ed-border)] pt-8">
+            <a
+              href={profile.socials.github}
+              target="_blank"
+              className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
+            >
+              GitHub ↗
+            </a>
+            <a
+              href={profile.socials.linkedin}
+              target="_blank"
+              className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
+            >
+              LinkedIn ↗
+            </a>
+            <a
+              href={profile.resumeUrl}
+              target="_blank"
+              className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
+            >
+              Resume ↗
+            </a>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );
