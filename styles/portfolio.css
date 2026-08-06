@@ -1,0 +1,13 @@
+/* Portfolio redesign — global styles */
+
+/* Neovim view scrollbar */
+.nvim-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.nvim-scroll::-webkit-scrollbar-track {
+  background: var(--tn-bg-dark);
+}
+.nvim-scroll::-webkit-scrollbar-thumb {
+  background: var(--tn-gutter);
+  border-radius: 3px;
+}
