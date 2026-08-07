@@ -13,7 +13,7 @@ export default function PageContent() {
   return (
     <main
       className={clsx(
-        "pt-14 transition-colors duration-200",
+        "pt-14 transition-colors duration-200 max-w-screen-xl mx-auto",
         view === "neovim" ? "bg-[var(--tn-bg)]" : "bg-white"
       )}
     >
