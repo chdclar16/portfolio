@@ -14,7 +14,7 @@ export default function PageContent() {
     <main
       className={clsx(
         "pt-14 transition-colors duration-200 max-w-screen-xl mx-auto",
-        view === "neovim" ? "bg-[var(--tn-bg)]" : "bg-white"
+        view === "neovim" ? "bg-[var(--tn-bg)]" : "bg-[#FBFBFA]"
       )}
     >
       <HeroSection />

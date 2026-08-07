@@ -17,6 +17,16 @@ const Pu   = ({ children }: { children: string }) => <span className="text-[var(
 const Cm   = ({ children }: { children: string }) => <span className="text-[var(--tn-comment)]">{children}</span>;
 const Num  = ({ children }: { children: string }) => <span className="text-[var(--tn-orange)]">{children}</span>;
 
+function techColor(tech: string): { bg: string; text: string } {
+  const frontend = ["React", "Next.js", "Redux", "Redux / RTK", "Tailwind CSS", "Bootstrap", "JavaScript"];
+  const backend  = ["Node.js", "Express", "Python", "Django", "FastAPI", "REST APIs"];
+  const data     = ["PostgreSQL", "MongoDB", "Docker", "SQL"];
+  if (frontend.includes(tech)) return { bg: "#E1F3FE", text: "#1F6C9F" };
+  if (backend.includes(tech))  return { bg: "#EDF3EC", text: "#346538" };
+  if (data.includes(tech))     return { bg: "#FDEBEC", text: "#9F2F2D" };
+  return { bg: "#FBF3DB", text: "#956400" };
+}
+
 function buildProjectLines(): Array<ReactNode> {
   const lines: Array<ReactNode> = [
     <Cm>// projects.js</Cm>,
