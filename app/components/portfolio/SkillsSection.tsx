@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useView } from "@/app/components/portfolio/ViewContext";
 import NvimBuffer, { NvimLine } from "@/app/components/portfolio/NvimBuffer";
@@ -76,23 +76,27 @@ function EditorialSkills() {
             Tech Stack
           </h2>
         </FadeIn>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {categories.map((category, index) => (
             <FadeIn key={category.label} delay={80 + index * 80}>
-              <h3 className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
-                {category.label}
-              </h3>
-              <ul className="space-y-2.5">
-                {category.skills.map((skill) => (
-                  <li
-                    key={skill}
-                    className="font-inter text-sm text-[var(--ed-body)] flex items-center gap-2.5"
-                  >
-                    <span className="w-1 h-1 rounded-full bg-[var(--ed-muted)] shrink-0 opacity-50" />
-                    {skill}
-                  </li>
-                ))}
-              </ul>
+              <div
+                className="p-6 rounded-[12px] border border-[var(--ed-border)]"
+                style={{ background: "var(--ed-surface)" }}
+              >
+                <h3 className="font-inter text-xs tracking-widest uppercase text-[var(--ed-muted)] mb-4">
+                  {category.label}
+                </h3>
+                <ul className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <li
+                      key={skill}
+                      className="font-inter text-xs px-2.5 py-1 rounded-[6px] bg-white border border-[#EAEAEA] text-[var(--ed-body)]"
+                    >
+                      {skill}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </FadeIn>
           ))}
         </div>
