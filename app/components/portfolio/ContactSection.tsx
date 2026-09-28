@@ -80,6 +80,7 @@ function EditorialContact() {
             <a
               href={profile.socials.github}
               target="_blank"
+              rel="noopener noreferrer"
               className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
             >
               GitHub ↗
@@ -87,6 +88,7 @@ function EditorialContact() {
             <a
               href={profile.socials.linkedin}
               target="_blank"
+              rel="noopener noreferrer"
               className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
             >
               LinkedIn ↗
@@ -94,6 +96,7 @@ function EditorialContact() {
             <a
               href={profile.resumeUrl}
               target="_blank"
+              rel="noopener noreferrer"
               className="font-inter text-sm text-[var(--ed-muted)] hover:text-[var(--ed-heading)] transition-colors"
             >
               Resume ↗
