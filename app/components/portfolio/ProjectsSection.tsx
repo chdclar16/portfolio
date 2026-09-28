@@ -107,6 +107,7 @@ function ProjectCard({
         <Link
           href={project.githubUrl}
           target="_blank"
+          rel="noopener noreferrer"
           className="font-inter text-sm text-[var(--ed-heading)] font-medium hover:opacity-60 transition-opacity"
         >
           View on GitHub ↗
